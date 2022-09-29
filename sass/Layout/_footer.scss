@@ -1,0 +1,29 @@
+.footer {
+    padding: 25px;
+    color: white;
+    background-color: darken($clr-background-menu,70);
+    h6 {
+        font-family: 'Shrikhand';
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+    &_links {
+        padding: 15px 0px;
+        ul {
+            li {
+                font-size: 0.95em;
+                margin-bottom: 8px;
+                :hover {
+                    color: $clr-secondary;
+                }
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+        @include desktop-only {
+            display: flex;
+            gap: 70px;
+        }
+    }
+}

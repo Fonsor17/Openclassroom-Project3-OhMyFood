@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 15px 0px;
+    position: relative;
+    & img { 
+        width: 160px;
+    }
+    a {
+        color: darken($clr-background-menu,70);
+        position: absolute;
+        top: 2px;
+        left: 22px;
+        font-size: 1.25em;
+    }
+}

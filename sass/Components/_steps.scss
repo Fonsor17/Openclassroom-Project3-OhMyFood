@@ -1,0 +1,24 @@
+.step { 
+    background-color: $clr-background-menu;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 3px darken($clr-background-menu,5);
+    height: 70px;
+    @include stepcounter;
+    i {
+        color: darken($clr-background-menu,45);
+        font-size: 20px;
+    }
+    &--highlight {
+        i {
+            color: $clr-primary
+        }
+    }
+    @include desktop-only {
+        width: 350px;
+    }
+}

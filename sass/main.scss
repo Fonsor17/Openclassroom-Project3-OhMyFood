@@ -1,13 +1,30 @@
+@import "./Utils/_variables.scss";
+@import "./Utils/mixins.scss";
+
+@import "./Base/base.scss";
+
+@import "./Base/_tipography.scss";
+
+@import "./Layout/header.scss";
+@import "./Layout/footer.scss";
+
+@import "./Components/buttons.scss";
+@import "./Components/steps.scss";
+@import "./Components/cards.scss";
+
+@import "./Pages/homepage.scss";
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-$clr-primary: #9356dc;
-$clr-secondary: #ff79da;
-$clr-tertiary: #99e2d0;
-$clr-background-menu: rgb(246, 246, 246);
-$clr-background-btn: linear-gradient($clr-secondary, $clr-primary);
+
+// $clr-primary: #9356dc;
+// $clr-secondary: #ff79da;
+// $clr-tertiary: #99e2d0;
+// $clr-background-menu: rgb(246, 246, 246);
+// $clr-background-btn: linear-gradient($clr-secondary, $clr-primary);
 
 
 
@@ -19,232 +36,249 @@ body {
     font-family: "Roboto";
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0px 15px 0px;
-    & img { 
-        width: 160px;
+// header {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px 0px 15px 0px;
+//     & img { 
+//         width: 160px;
 
-    }
-}
+//     }
+// }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $clr-background-menu ;
-    padding-bottom: 40px;
-    &_map {
-    width: 100%;
-    height: 50px;
-    background-color: darken($clr-background-menu, 7);
-    box-shadow: inset 0px 4px 6px -4px gray;
-    font-weight: 700;
-    font-size: 16px;
-    color: darken($clr-background-menu,70);
-    text-align: center;
-    padding-top: 15px;
-    i {
-    margin-right: 10px;
-    margin-left: -20px;
-      }
-   }
-   &_title {
-    text-align: center;
-    gap: 40px;
-    margin: 40px 0px;
-    & p {
-        font-size: 18px;
-        margin: 20px;
-        font-weight: 200;
-    }
+// .intro {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     background-color: $clr-background-menu ;
+//     padding-bottom: 60px;
+//     &_map {
+//     width: 100%;
+//     height: 50px;
+//     background-color: darken($clr-background-menu, 5);
+//     box-shadow: inset 0px 8px 3px -4px lightgray;
+//     font-weight: 700;
+//     font-size: 0.98em;
+//     color: darken($clr-background-menu,70);
+//     text-align: center;
+//     padding-top: 15px;
+//     i {
+//     margin-right: 10px;
+//     margin-left: -20px;
+//       }
+//    }
+//    &_title {
+//     text-align: center;
+//     margin: 40px 20px 30px 20px;
+//     & p {
+//         font-size: 18px;
+//         font-weight: 200;
+//         margin-top: 40px;
+//     }
+//     }
 
-   }
-
-}
+// }
  
 //background: lighten($lcr-background-btn,30%)
 
-.btn {
-    width: 215px;
-    height: 50px;
-    border-radius: 30px;
-    padding: 15px;
-    text-align: center;
-    background: $clr-background-btn;
-    box-shadow: 3px 5px 13px 3px lightgray; //da fare variabile//
-    transition: all 500ms;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    &_bg {
+// .btn {
+//     width: 215px;
+//     height: 50px;
+//     border-radius: 30px;
+//     padding: 15px;
+//     text-align: center;
+//     background: $clr-background-btn;
+//     box-shadow: 3px 5px 13px 3px lightgray; 
+//     transition: all 500ms;
+//     position: relative;
+//     z-index: 1;
+//     overflow: hidden;
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         background: radial-gradient(circle, lighten($clr-secondary,10) 0%,$clr-primary 100%);
+//         opacity: 0;
+//         z-index: -1;
+//         transition: opacity 250ms;
+//     }
+//     &:hover {
+//         box-shadow: 0px 0px 12px 8px lightgray; //da fare una map o mixin relativa alla boxshadow di base//
+//         &::after {
+//             opacity: 1;
+//         }
+//     }
+// }
+
+
+// .steps {
+//     font-size: 16px ;
+//     font-weight: 700;
+//     padding: 55px 20px 70px 20px;
+//     h2 {
+//         margin-bottom: 30px;
+//     }
+//     &_container {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 25px;
+//         padding-left: 10px;
+//         background-color: white;
+//         counter-reset: stepnumber;
+//     }
+// }
+
+
+// .step { 
+//     background-color: $clr-background-menu;
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: 25px;
+//     width: 100%;
+//     border-radius: 20px;
+//     box-shadow: 4px 4px 10px 3px darken($clr-background-menu,5);
+//     height: 70px;
+//     @include stepcounter;
+//     i {
+//         color: darken($clr-background-menu,45);
+//         font-size: 20px;
+//     }
+//     &--highlight {
+//         i {
+//             color: $clr-primary
+//         }
+//     }
+// }
+
+
+
+
+
+// .restaurants {
+//     padding: 55px 20px;
+//     width: 100%;
+//     background-color: $clr-background-menu;
+//     h2 {
+//         margin-bottom: 20px;
+//     }
+//     &_container {
+//         display: flex;
+//         flex-direction: column; 
+//         gap: 20px;
+//         @include desktop-only {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//             justify-content: center;
+//         }
+//     }
     
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: radial-gradient(circle, lighten($clr-secondary,10) 0%,$clr-primary 100%);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-       
-    }
-    &:hover {
-        box-shadow: 0px 0px 12px 8px lightgray; //da fare una map o mixin relativa alla boxshadow di base//
-        & .btn_bg {
-            opacity: 1;
+// }
 
-        }
-    }
-}
+// .restaurants_container a {
+//     @include desktop-only {
+//         min-width: 420px;
+//         flex: 1 0 420px;
+//     }
+// }
 
+// .restaurant-card {
+//     background-color: $clr-background-card;
+//     border-radius: $card-radius;
+//     box-shadow: $card-shadow;
+//     width: 100%;
+//     overflow: hidden;
+//     // z-index: -1;
+//     &_image {
+//         img {
+//             width: 100%;
+//             height: 172px;
+//             object-fit: cover;           
+//         }
+//     }
+//     &_title {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 11px 0px 15px 13px; 
+//         gap: 3px;
+//         position: relative;
+//         .heart {
+//         position: absolute;
+//         top: 15px;
+//         right: 25px;
+//         }
+//     }
+//     @include desktop-only {
+//         min-width: 420px;
+//         max-width: 600px;
+//         flex: 1 0 420px;
+//     }
 
-.steps {
-    font-size: 16px ;
-    font-weight: 700;
-    padding: 70px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    height: 1000px;
+// }
 
-}
-
-// @mixin stepcounter({
-
-
-.step { 
-    background-color: $clr-background-menu;
-    padding: 5px 0px 0px -12px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px 3px darken($clr-background-menu,5);
-    counter-reset: stepnumber;
-    
-
-    // width: 100%;
-    // // width: 300px;
-    height: 70px;
-    &::before {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        counter-increment: stepnumber;
-        background-color: $clr-primary;
-        content: counter(stepnumber);
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        margin-left: -12px;
-        font-weight: 400;
-        font-size: 14px;
+// .heart {
+//     .fa-heart{
+//         font-size: 30px;
+//         position: relative;
+//         color: black;
+//         &:hover{
+//             .fa-solid{
+//                 animation: heart 1000ms forwards;
+//             }
+//         }
+//      .fa-solid{
+//         font-size: 30px;
+//         font-weight: 700;
+//         background: $clr-background-btn;
+//         background-clip: text;
+//         color: transparent;
+//         position: absolute;
+//         top:0;
+//         right:0;
+//         transform: scale(0);
         
-
-    }
-
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-h2 {
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.restaurants {
-    padding: 20px;
-    width: 100%;
-    height: 700 px;
-    background-color: $clr-background-menu;
-    
-}
-
-.card {
-    // margin: 50px 50px;
-    background-color: white; //variabile da fare//;
-    border-radius: 14px;
-    box-shadow: 4px 6px 13px -6px lightgrey;
-    max-width: 350px;
-    &_image {
-        width: 100%;
-        img {
-            width: 100%;
-            height: 172px;
-            object-fit: cover;           
-            border-radius: 14px 14px 0px 0px; //variabile da collera al borde della card//
-        }
-      
-    }
-    &_title {
-        display: flex;
-        flex-direction: column;
-        padding: 11px 0px 15px 13px; ////da fare una list-map forse////
-        gap: 3px;
-        
-        h3 {
-            color: black;
-            font-weight: 800;
-        }
-
-        p {
-            color: black;
-            font-size: 1.14em;
-
-        }
-        
-    }
-   
-}
-
-.heart {
-    .fa-heart{
-        font-weight: 100;
-        font-size: 30px;
-        position: relative;
-        // transition: all 500ms ease-in-out;
-        // transform-origin: bottom;
-       
-        // &:hover{
-        //     .fa-heart {
-
-        //     }
-        // 
-        &:hover{
-            .fa-solid{
-                animation: heart 1000ms forwards;
-                
-                
-            }
-        }
-     .fa-solid{
-        font-size: 30px;
-        font-weight: 700;
-        background: $clr-background-btn;
-        background-clip: text;
-        color: transparent;
-        position: absolute;
-        top:0;
-        right:0;
-        transform: scale(0);
-        // z-index: 1;
 
 
         
-    }
-}
-}
-//pagine MENU//
+//     }
+// }
+// }
+
+// .footer {
+//     padding: 25px;
+//     color: white;
+//     background-color: darken($clr-background-menu,70);
+//     h6 {
+//         font-family: 'Shrikhand';
+//         font-size: 1.1em;
+//         font-weight: 100;
+//     }
+//     &_links {
+//         padding: 15px 0px;
+//         ul {
+//             li {
+//                 font-size: 0.95em;
+//                 margin-bottom: 8px;
+//                 :hover {
+//                     color: $clr-secondary;
+//                 }
+//                 i {
+//                     margin-right: 10px;
+//                 }
+//             }
+//         }
+//         @include desktop-only {
+//             display: flex;
+//             gap: 70px;
+//         }
+//     }
+// }
+
+
+// //pagine MENU//
 
 .cover { 
     width: 100%;
@@ -254,33 +288,66 @@ h2 {
         height: 275px;
         object-fit: cover;
     }
-    
- 
 }
 
 .menu {
-    height: 2000px; //togliere poi//
-    width: 100%;
     background-color: $clr-background-menu;
     border-radius: 40px 40px 0px 0px;
     position: relative;
     margin-top: -40px;
-    padding: 20px;
-    
+    padding: 20px 20px 80px 20px;
+    &_title {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px 30px 0px;
+        h3 {
+            font-family: 'Shrikhand';
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+    }
+    &_btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        .btn {
+          width: 190px;
+        }
+    }
 }
 
-.menu_title {
-    margin-bottom: 70px;
-}
+// .menu_title {
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 10px 10px 10px 0px;
+//     h3 {
+//         font-family: 'Shrikhand';
+//         font-size: 1.6em;
+//         font-weight: 500;
+//     }
 
-.menu_part_cards {
+//     margin-bottom: 70px;
+// }
+
+.menu-part{
+    &_title {
+        text-transform: uppercase;
+        font-size: 1.07em;
+        color: darken($clr-background-menu,70);
+        width: 43px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $clr-tertiary;
+        white-space: nowrap;
+    }
+    &_container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 40px 0px
+    gap: 15px;
+    padding: 15px 0px 40px 0px;
+    }
 }
 
-.menu_card {
+.menu-card {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -291,7 +358,7 @@ h2 {
     overflow: hidden;
     position: relative;
     padding: 11px 0px 10px 13px;
-    box-shadow: 4px 6px 13px -6px lightgrey; //da mixinare//
+    box-shadow: $card-shadow; //da mixinare//
     transition: all 500ms;
     animation: gradually-appear 1000ms;
     opacity: 0;
@@ -339,7 +406,7 @@ h2 {
     }
     &:hover {
         padding-right: 20%;
-        > .menu_card_check {
+        > .menu-card_check {
         transform: translateX(0);
         > .fa-circle-check {
             transform: rotate(1turn);
@@ -522,4 +589,596 @@ h2 {
             animation: intro2 3000ms;
      }
     
+    }
+
+
+    //----ANIMAZIONE2---///
+     body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container  {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: page-reveal 800ms;
+        animation-delay: 4000ms;
+        .circle1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            // background-color: aqua;
+            position: relative;
+            .spinner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                animation: spinner 1000ms linear forwards;
+                .bubble {
+                    position: absolute;
+                    top: 50%;
+                    left:0;
+                    transform: scale(0);
+                    border-radius: 50%;
+                    width: 5px;
+                    height: 5px;
+                    opacity: 0.6;
+                    animation: bubble 1000ms linear;
+                }
+                &:nth-of-type(1) {
+                   
+                   
+                    .bubble {
+                        background-color: $clr-primary;
+                    }
+                    
+                }
+                &:nth-of-type(2) {
+                    
+                    
+                    animation-delay: 50ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 50ms;
+                    }
+                }
+                &:nth-of-type(3) {
+                    
+                    animation-delay: 100ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 100ms;
+                    }
+                }
+                &:nth-of-type(4) {
+                    
+                    animation-delay: 150ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 150ms
+                    }
+                }
+                &:nth-of-type(5) {
+                    
+                    animation-delay: 200ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 200ms
+                    }
+                }
+                &:nth-of-type(6) {
+                    
+                    animation-delay: 250ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 250ms;
+                    }
+                }
+                &:nth-of-type(7) {
+                    
+                    animation-delay: 300ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 300ms;
+                    }
+                }
+                &:nth-of-type(8) {
+                    
+                    animation-delay: 350ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 350ms;
+                    }
+                }
+                &:nth-of-type(9) {
+                    
+                    animation-delay: 400ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 400ms;
+                    }
+                }
+                &:nth-of-type(10) {
+                
+                    animation-delay: 450ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 450ms;
+                    }
+                }
+                &:nth-of-type(11) {
+                    
+                    animation-delay: 500ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 500ms;
+                    }
+                }
+                &:nth-of-type(12) {
+                    
+                    animation-delay: 550ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 550ms;
+                    }
+                }
+            }
+
+           
+        }
+        .circle2 {
+               width: 100px;
+                height: 100px;
+                 border-radius: 50%;
+                position: relative;
+                .spinner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    animation: spinner-inverse  1000ms linear forwards;
+                    .bubble {
+                        position: absolute;
+                        top: 50%;
+                        left:0;
+                        transform: scale(0);
+                        border-radius: 50%;
+                        width: 5px;
+                        height: 5px;
+                        opacity: 0.6;
+                        animation: bubble 1000ms;
+                    }
+                    &:nth-of-type(1) {
+                       
+                        animation-delay: 600ms;
+                        .bubble {
+                            background-color: $clr-primary;
+                            animation-delay: 600ms;
+                        }
+                        
+                    }
+                    &:nth-of-type(2) {
+                        
+                        animation-delay: 650ms;
+                        .bubble {
+                            background-color: $clr-secondary;
+                            animation-delay: 650ms;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        
+                        animation-delay: 700ms;
+                        .bubble {
+                            background-color: $clr-tertiary;
+                            animation-delay: 700ms;
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        
+                        animation-delay: 750ms;
+                        .bubble {
+                            background-color: $clr-primary;
+                            animation-delay: 750ms
+                        }
+                    }
+                    &:nth-of-type(5) {
+                        
+                        animation-delay: 800ms;
+                        .bubble {
+                            background-color: $clr-secondary;
+                            animation-delay: 800ms
+                        }
+                    }
+                    &:nth-of-type(6) {
+                        
+                        animation-delay: 850ms;
+                        .bubble {
+                            background-color: $clr-tertiary;
+                            animation-delay: 850ms;
+                        }
+                    }
+                    &:nth-of-type(7) {
+                        
+                        animation-delay: 900ms;
+                        .bubble {
+                            background-color: $clr-primary;
+                            animation-delay: 900ms;
+                        }
+                    }
+                    &:nth-of-type(8) {
+                        
+                        animation-delay: 950ms;
+                        .bubble {
+                            background-color: $clr-secondary;
+                            animation-delay: 950ms;
+                        }
+                    }
+                    &:nth-of-type(9) {
+                        
+                        animation-delay: 1000ms;
+                        .bubble {
+                            background-color: $clr-tertiary;
+                            animation-delay: 1000ms;
+                        }
+                    }
+                    &:nth-of-type(10) {
+                        
+                        animation-delay: 1050ms;
+                        .bubble {
+                            background-color: $clr-primary;
+                            animation-delay: 1050ms;
+                        }
+                    }
+                    &:nth-of-type(11) {
+                        
+                        animation-delay: 1100ms;
+                        .bubble {
+                            background-color: $clr-secondary;
+                            animation-delay: 1100ms;
+                        }
+                    }
+                    &:nth-of-type(12) {
+                        
+                        animation-delay: 1150ms;
+                        .bubble {
+                            background-color: $clr-tertiary;
+                            animation-delay: 1150ms;
+                        }
+                    }
+                }
+    
+               
+            }
+
+        
+        .circle3  {
+            // background-color: aqua;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            .spinner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                animation: spinner 1000ms linear forwards;
+                .bubble {
+                    position: absolute;
+                    top: 50%;
+                    left:0;
+                    transform: scale(0);
+                    border-radius: 50%;
+                    width: 5px;
+                    height: 5px;
+                    opacity: 0.6;
+                    animation: bubble 1000ms linear;
+                }
+                &:nth-of-type(1) {
+                   
+                    animation-delay: 1200ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 1200ms;
+                    }
+                    
+                }
+                &:nth-of-type(2) {
+                    
+                    
+                    animation-delay: 1250ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 1250ms;
+                    }
+                }
+                &:nth-of-type(3) {
+                    
+                    animation-delay: 1300ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 1300ms;
+                    }
+                }
+                &:nth-of-type(4) {
+                    
+                    animation-delay: 1350ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 1350ms
+                    }
+                }
+                &:nth-of-type(5) {
+                    
+                    animation-delay: 1400ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 1400ms
+                    }
+                }
+                &:nth-of-type(6) {
+                    
+                    animation-delay: 1450ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 1450ms;
+                    }
+                }
+                &:nth-of-type(7) {
+                    
+                    animation-delay: 1500ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 1500ms;
+                    }
+                }
+                &:nth-of-type(8) {
+                    
+                    animation-delay: 1550ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 1550ms;
+                    }
+                }
+                &:nth-of-type(9) {
+                    
+                    animation-delay: 1600ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 1600ms;
+                    }
+                }
+                &:nth-of-type(10) {
+                
+                    animation-delay: 1650ms;
+                    .bubble {
+                        background-color: $clr-primary;
+                        animation-delay: 1650ms;
+                    }
+                }
+                &:nth-of-type(11) {
+                    
+                    animation-delay: 1700ms;
+                    .bubble {
+                        background-color: $clr-secondary;
+                        animation-delay: 1700ms;
+                    }
+                }
+                &:nth-of-type(12) {
+                    
+                    animation-delay: 1750ms;
+                    .bubble {
+                        background-color: $clr-tertiary;
+                        animation-delay: 1750ms;
+                    }
+                }
+            }
+
+           
+        }
+
+        .bar {
+            position: absolute;
+            width: 300px;
+            height: 40px;
+            .bubble {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: antiquewhite;
+                position: absolute;
+                top: 50%;
+                right: 4px;
+                transform: scale(0);
+                animation: orizontal 1000ms;
+
+                &:nth-of-type(1) {
+                    background-color: $clr-primary;
+                    animation-delay: 1800ms;
+                }
+                &:nth-of-type(2) {
+                    background-color: $clr-secondary;
+                    animation-delay: 1850ms;
+                }
+                &:nth-of-type(3) {
+                    background-color: $clr-tertiary;
+                    animation-delay: 1900ms;
+                }
+                &:nth-of-type(4) {
+                    background-color: $clr-primary;
+                    animation-delay: 1950ms;
+                }
+                &:nth-of-type(5) {
+                    background-color: $clr-secondary;
+                    animation-delay: 2000ms;
+                }
+                &:nth-of-type(6) {
+                    background-color: $clr-tertiary;
+                    animation-delay: 2050ms;
+                }
+                &:nth-of-type(7) {
+                    background-color: $clr-primary;
+                    animation-delay: 2100ms;
+                }
+                &:nth-of-type(8) {
+                    background-color: $clr-secondary;
+                    animation-delay: 2150ms;
+                }
+                &:nth-of-type(9) {
+                    background-color: $clr-tertiary;
+                    animation-delay: 2200ms;
+                }
+                &:nth-of-type(10) {
+                    background-color: $clr-primary;
+                    animation-delay: 2250ms;
+                }
+                &:nth-of-type(11) {
+                    background-color: $clr-secondary;
+                    animation-delay: 2300ms;
+                }
+                &:nth-of-type(12) {
+                    background-color: $clr-tertiary;
+                    animation-delay: 2350ms;
+                }
+
+            }
+        }
+    }
+    
+
+
+    // .container > div {
+    //     width: 100px;
+    //     height: 100px;
+    //     border-radius: 50%;
+       
+    // }
+
+    .title {
+        font-family: 'Shrikhand';
+        font-size: 40px;
+        width: 300px;
+        height: 60px;
+        // background-color: $clr-primary;
+        position: absolute;
+        top:25%;
+        right: -50px;
+        
+        &_writing {
+            position: relative;
+            z-index: -1;
+            background: linear-gradient(to left, $clr-primary, $clr-secondary, $clr-tertiary);
+            background-clip: text;
+            color: transparent;
+            &_cover {
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top:0;
+             right:0;
+             z-index: 1;
+             color: rgb(163, 161, 161);
+             animation: reveal 1000ms forwards;
+             animation-delay: 2400ms;
+             
+            
+
+            }
+        }
+        }
+           
+        
+    
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes spinner-inverse {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(-180deg);
+        }
+    }
+
+    @keyframes orizontal {
+        0% {
+            transform: translateX(0) scale(0);
+            
+            
+        }
+
+        90% {
+            transform: translateX(-350px) scale(8);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateX(-360px) scale(9);
+            opacity: 0;
+        }
+            
+    }
+
+    @keyframes bubble {
+        0% {
+            transform: scale(0);
+        }
+        
+        80% {
+            transform: scale(8);
+        }
+
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    @keyframes reveal {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        50% {
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 0%;
+            transform: translateX(-300px);
+        }
+      
+    
+    }
+
+    @keyframes page-reveal {
+        0% {
+            // transform: translateX(0);
+            opacity:1;
+        }
+
+        100% {
+            // transform: translateX(-50vw);
+            opacity: 0;
+
+        }
     }
