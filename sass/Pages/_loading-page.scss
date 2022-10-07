@@ -1,0 +1,109 @@
+.loading-page {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   z-index: 40;
+   animation: page-reveal 1300ms forwards;
+   animation-delay: 4000ms;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &_container {
+    margin-top: -30vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: page-reveal 1300ms forwards;
+    animation-delay: 4000ms;
+   }
+
+}
+
+
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    &--1{
+        .spinner {
+            @include bubbles;
+            }
+    }
+    &--2{
+        .spinner {
+            @include bubbles($direction: spinner-inverse, $delay: 600ms);
+        }
+    }
+    &--3{
+        .spinner {
+        @include bubbles($delay: 1200ms)
+        }
+    }
+}
+
+
+.bar-flow {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    .bubble {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: antiquewhite;
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: scale(0);
+        animation: bubbles-slide 1000ms ease-in-out;
+        @for $i from 1 through 12 {
+            &:nth-child(#{$i}) {
+            animation-delay: calc(50ms * $i + 1800ms); 
+            @if ( $i == 3 ) or ( $i == 6 ) or ( $i == 9 ) or ( $i == 12 ) {
+                background-color: $clr-primary;
+            } @else {
+                @if ( $i == 2 ) or ( $i == 5 ) or ( $i == 8 ) or ( $i == 11 ){
+                    background-color: $clr-secondary;
+                } @else {
+                    background-color: $clr-tertiary;
+                };
+            };       
+            }
+        }
+    }
+}
+
+.title {
+    font-family: 'Shrikhand';
+    font-size: 40px;
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    top:25%;
+    right: -50px;
+    &_writing {
+        position: relative;
+        z-index: -1;
+        background: linear-gradient(to left, $clr-primary, $clr-secondary, $clr-tertiary);
+        background-clip: text;
+        color: transparent;
+        &_cover {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            right:0;
+            z-index: 1;
+            color: rgb(163, 161, 161);
+            animation: logo-reveal 1000ms forwards;
+            animation-delay: 2400ms;
+        }
+    }
+}

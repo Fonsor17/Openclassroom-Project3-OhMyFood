@@ -1,0 +1,68 @@
+.cover { 
+    width: 100%;
+    height: 275px;
+    img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    background-color: $clr-background-menu;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+    margin-top: -40px;
+    padding: 20px 20px 80px 20px;
+    &_title {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px 30px 0px;
+        h3 {
+            font-family: 'Shrikhand';
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+    }
+    &_container{
+        @include desktop-only {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        }
+
+    }
+    &_btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        .btn {
+          width: 190px;
+        }
+    }
+}
+
+.menu-part{
+    &_title {
+        text-transform: uppercase;
+        font-size: 1.07em;
+        color: darken($clr-background-menu,70);
+        width: 43px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $clr-tertiary;
+        white-space: nowrap;
+        animation: slide 1000ms;
+
+    }
+    &_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0px 40px 0px;
+    }
+    @include desktop-only {
+        flex-grow: 1;
+        max-width: 400px;
+    }
+}
