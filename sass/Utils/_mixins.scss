@@ -46,16 +46,6 @@
                     opacity: 0.6;
                     animation: blow-up 1000ms ease-in-out;
                     animation-delay: calc(50ms * $i + $delay);
-                    // @if ( $i == 1 ) or ( $i == 4 ) or ( $i == 7 ) or ( $i == 10 )  {
-                    //     background-color: $clr-primary;
-                    // } @else {
-                    //     background-color: #ff79da;
-                    // };
-                    // @if ( $i == 2 ) or ( $i == 5 ) or ( $i == 8 ) or ( $i == 11 ){
-                    //     background-color: $clr-secondary;
-                    // } @else {
-                    //     background-color: #ff79da;
-                    // };
                     @if ( $i == 3 ) or ( $i == 6 ) or ( $i == 9 ) or ( $i == 12 ) {
                         background-color: $clr-primary;
                     } @else {

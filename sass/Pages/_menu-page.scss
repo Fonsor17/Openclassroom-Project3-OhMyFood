@@ -1,26 +1,38 @@
 .cover { 
     width: 100%;
     height: 275px;
+    @include desktop-only {
+        height: 375px;
+    }
     img {
         width: 100%;
-        height: 275px;
         object-fit: cover;
-    }
+        height: 275px;
+        @include desktop-only {
+            height: 400px;
+            object-position: top 60% right 0px;
+        }
+}
 }
 
 .menu {
     background-color: $clr-background-menu;
     border-radius: 40px 40px 0px 0px;
     position: relative;
-    margin-top: -40px;
-    padding: 20px 20px 80px 20px;
+    margin-top: -50px;
+    padding: 20px 17px 80px 17px;
     &_title {
         display: flex;
         justify-content: space-between;
         margin: 10px 10px 30px 0px;
+        gap: 20px;
+        @include desktop-only {
+            justify-content: center;
+            gap: 50px;
+        }
         h3 {
             font-family: 'Shrikhand';
-            font-size: 1.6em;
+            font-size: 1.8em;
             font-weight: 500;
         }
     }
@@ -62,7 +74,7 @@
     padding: 15px 0px 40px 0px;
     }
     @include desktop-only {
-        flex-grow: 1;
+        flex: 1 1 250px;
         max-width: 400px;
     }
 }
