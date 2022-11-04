@@ -1,9 +1,9 @@
 # Project3_OhMyFood
 Integrate a mobile website with animations in CSS.
 
-Code source: 
+Code source: https://github.com/Fonsor17/Openclassroom-Project3-OhMyFood.git
 
-GitHub pages: 
+GitHub pages: https://fonsor17.github.io/Openclassroom-Project3-OhMyFood/
 
 Mobile-focused responsive site.
 Css compiled with SASS, built with:
